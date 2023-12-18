@@ -1,0 +1,16 @@
+<!-- token_input.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter OAuth Token</title>
+</head>
+<body>
+    <form method="post" action="{% url 'create_stackscript' %}">
+        {% csrf_token %}
+        <label for="token">OAuth Token:</label>
+        <input type="text" id="token" name="token">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
